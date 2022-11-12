@@ -16,11 +16,15 @@ class PlayVideo extends StatefulWidget {
 
 class _PlayVideoState extends State<PlayVideo> {
 
+  final VideoController controller=Get.find();
+  @override
+  void initState() {
+    super.initState();
+    controller.isVideoPlaying.value=false;
+  }
 
   @override
   Widget build(BuildContext context) {
-
-    final VideoController controller=Get.find();
 
     return Scaffold(
       body: Column(
