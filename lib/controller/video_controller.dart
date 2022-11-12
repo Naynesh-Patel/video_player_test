@@ -49,6 +49,7 @@ class VideoController extends GetxController {
     VideoPlayerController videoPlayerController =
         VideoPlayerController.network(listOfVideo[index].video ?? "")
           ..initialize().then((_) {});
-    Get.to(PlayVideo(videoPlayerController));
+    // Get.to(PlayVideo(videoPlayerController));
+    Get.to(PlayVideo(listOfVideo[index].video??""));
   }
 }
