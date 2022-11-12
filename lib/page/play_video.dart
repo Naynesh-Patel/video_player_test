@@ -32,16 +32,8 @@ class _PlayVideoState extends State<PlayVideo> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-          Stack(
-            children: [
-              FlickVideoPlayer(
-                flickManager: flickManager,
-              ),
-            ],
-          )
-        ],
+      body:   FlickVideoPlayer(
+        flickManager: flickManager,
       ),
     );
   }
